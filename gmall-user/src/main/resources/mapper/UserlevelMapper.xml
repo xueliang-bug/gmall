@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xl.gmall.user.mapper.UserMapperlevel">
+    <!--查询所有-->
+    <select id="selectalluserlevel" resultType="com.xl.gmall.user.bean.UserMemberlevel" >
+        select l.* from ums_member_level l
+    </select>
+    <!--添加-->
+    <insert id="addUserMemberlevel" parameterType="com.xl.gmall.user.bean.UserMemberlevel">
+        insert into  ums_member_level (name,growth_point,default_status,free_freight_point,comment_growth_point,priviledge_free_freight,priviledge_sign_in,priviledge_comment,priviledge_promotion,priviledge_member_price,priviledge_birthday,note
+)values (#{name},#{growthPoint},#{defaultStatus},#{freeFreightPoint},#{commentGrowthPoint},#{priviledgeFreeFreight},#{priviledgeSignIn},
+        #{priviledgeComment},#{priviledgePromotion},#{priviledgeMemberPrice},#{priviledgeBirthday},#{note})
+    </insert>
+    <!--删除-->
+    <delete id="deleteUserlevelMemberById" parameterType="java.lang.Integer" >
+        delete * from ums_member_level where id=#{id}
+    </delete>
+    <!--修改-->
+    <update id="updateuserlevelmember" parameterType="com.xl.gmall.user.bean.UserMemberlevel">
+        update ums_member_level set name=#{name},growth_point=#{growthPoint},=#{growthPoint},default_status=#{defaultStatus},free_freight_point=#{freeFreightPoint},comment_growth_point=#{commentGrowthPoint},
+        priviledge_free_freight=#{priviledgeFreeFreight},priviledge_sign_in=#{priviledgeSignIn},priviledge_comment=#{priviledgeComment},priviledge_promotion=#{priviledgePromotion},priviledge_member_price=#{priviledgeMemberPrice},priviledge_birthday=#{priviledgeBirthday},note=#{note}
+        where id=#{id}
+    </update>
+    <!--根据id查询-->
+    <select id="findUserlevelMemberById" parameterType="java.lang.Integer" resultType="com.xl.gmall.user.bean.UserMemberlevel">
+        select * from ums_member_level where id = #{id}
+    </select>
+
+</mapper>

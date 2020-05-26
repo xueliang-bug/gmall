@@ -1,8 +1,8 @@
 package com.xl.gmall.user.controller;
 
-import com.xl.gmall.user.bean.UmsMemberReceiveAddress;
-import com.xl.gmall.user.bean.UserMember;
-import com.xl.gmall.user.service.UserService;
+import com.xl.gmall.bean.UmsMember;
+import com.xl.gmall.bean.UmsMemberReceiveAddress;
+import com.xl.gmall.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +19,7 @@ import java.util.List;
 @Controller
 public class UserController {
     @Autowired
-     UserService userService;
+    UserService userService;
 
     /**
      * 通用mapper的条件查询
@@ -39,8 +39,8 @@ public class UserController {
      */
     @RequestMapping("findFallUser")
     @ResponseBody
-    public List<UserMember> findFallUser() {
-        List<UserMember> userMembers = userService.findalluser();
+    public List<UmsMember> findFallUser() {
+        List<UmsMember> userMembers = userService.findalluser();
         return userMembers;
     }
 
@@ -52,7 +52,7 @@ public class UserController {
      */
     @RequestMapping("addUserMember")
     @ResponseBody
-    public void addUserMember(UserMember userMember) {
+    public void addUserMember(UmsMember userMember) {
         userService.addusermember(userMember);
     }
 
@@ -72,7 +72,7 @@ public class UserController {
      */
     @RequestMapping("updateusermember")
     @ResponseBody
-   public UserMember updateusermember( UserMember userMember){
+   public UmsMember updateusermember( UmsMember userMember){
        return userService.updateusermember(userMember);
    }
 

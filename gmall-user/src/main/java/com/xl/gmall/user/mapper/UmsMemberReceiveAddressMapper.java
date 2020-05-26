@@ -1,6 +1,6 @@
 package com.xl.gmall.user.mapper;
 
-import com.xl.gmall.user.bean.UmsMemberReceiveAddress;
+import com.xl.gmall.bean.UmsMemberReceiveAddress;
 import tk.mybatis.mapper.common.Mapper;
 
 /**
@@ -11,7 +11,7 @@ import tk.mybatis.mapper.common.Mapper;
  */
 public interface UmsMemberReceiveAddressMapper extends Mapper<UmsMemberReceiveAddress> {
     //删除
-    void delete(int id);
+    UmsMemberReceiveAddress deleteById(int id);
     //修改
     void updateUmsMemberReceiveAddress(UmsMemberReceiveAddress ums);
     //id查询

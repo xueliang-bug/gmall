@@ -1,8 +1,8 @@
 package com.xl.gmall.user.service.impl;
 
-import com.xl.gmall.user.bean.UmsMemberReceiveAddress;
+import com.xl.gmall.service.UmsMemberReceiveAddressService;
+import com.xl.gmall.bean.UmsMemberReceiveAddress;
 import com.xl.gmall.user.mapper.UmsMemberReceiveAddressMapper;
-import com.xl.gmall.user.service.UmsMemberReceiveAddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,13 +37,15 @@ public class UmsMemberReceiveAddressServiceImpl implements UmsMemberReceiveAddre
         umsMemberMapper.insert(ums);
     }
 
+
+
     /**
      * 删除
      * @param id
      */
     @Override
-    public void deleteUmsMemberReceiveAddress(int id) {
-        umsMemberMapper.delete(id);
+    public UmsMemberReceiveAddress deleteById(int id) {
+        return umsMemberMapper.deleteById(id);
     }
 
     /**

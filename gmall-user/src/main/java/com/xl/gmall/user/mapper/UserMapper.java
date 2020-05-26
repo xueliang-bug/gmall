@@ -1,6 +1,6 @@
 package com.xl.gmall.user.mapper;
 
-import com.xl.gmall.user.bean.UserMember;
+import com.xl.gmall.bean.UmsMember;
 import org.springframework.context.annotation.Primary;
 import tk.mybatis.mapper.common.Mapper;
 
@@ -13,39 +13,39 @@ import java.util.List;
  * @version: 1.0
  */
 @Primary
-public interface UserMapper extends Mapper<UserMember> {
+public interface UserMapper extends Mapper<UmsMember> {
     /**
      * UserMember查询所有
      * @return
      */
-    List<UserMember>  selectalluser();
+    List<UmsMember>  selectalluser();
 
     /**
      * 添加UserMember
      * @param userMember
      * @return
      */
-    UserMember addusermember(UserMember userMember);
+    UmsMember addusermember(UmsMember userMember);
 
     /**
      * 删除
      * @param id
      * @return
      */
-    UserMember deleteUserMemberById(int id);
+    UmsMember deleteUserMemberById(int id);
 
     /**
      * 修改
      * @param userMember
      * @return
      */
-    UserMember updateusermember(UserMember userMember);
+    UmsMember updateusermember(UmsMember userMember);
 
     /**
      * 根据id查询
      * @param id
      * @return
      */
-     UserMember findUserMemberById(int id);
+    UmsMember findUserMemberById(int id);
 
 }

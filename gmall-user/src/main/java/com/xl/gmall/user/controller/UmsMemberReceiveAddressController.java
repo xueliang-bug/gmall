@@ -1,14 +1,12 @@
 package com.xl.gmall.user.controller;
 
-import com.xl.gmall.user.bean.UmsMemberReceiveAddress;
-import com.xl.gmall.user.bean.UserMember;
-import com.xl.gmall.user.service.UmsMemberReceiveAddressService;
+import com.xl.gmall.bean.UmsMemberReceiveAddress;
+import com.xl.gmall.service.UmsMemberReceiveAddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.persistence.Column;
 import java.util.List;
 
 /**
@@ -50,7 +48,7 @@ public class UmsMemberReceiveAddressController {
     @RequestMapping("deleteUmsMemberReceiveAddress")
     @ResponseBody
     public void deleteUmsMemberReceiveAddress(int id) {
-        umsMemberReceiveAddressService.deleteUmsMemberReceiveAddress(id);
+        umsMemberReceiveAddressService.deleteById(id);
     }
 
     /**

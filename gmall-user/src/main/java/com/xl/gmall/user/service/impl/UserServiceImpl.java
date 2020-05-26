@@ -1,13 +1,12 @@
 package com.xl.gmall.user.service.impl;
 
-import com.xl.gmall.user.bean.UmsMemberReceiveAddress;
-import com.xl.gmall.user.bean.UserMember;
+import com.xl.gmall.service.UserService;
+import com.xl.gmall.bean.UmsMemberReceiveAddress;
+import com.xl.gmall.bean.UmsMember;
 import com.xl.gmall.user.mapper.UmsMemberReceiveAddressMapper;
 import com.xl.gmall.user.mapper.UserMapper;
-import com.xl.gmall.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -29,9 +28,9 @@ public class UserServiceImpl  implements UserService {
      * @return
      */
     @Override
-    public List<UserMember> findalluser() {
+    public List<UmsMember> findalluser() {
        // List<UserMember> userMember =userMapper.selectalluser();
-        List<UserMember> userMember=userMapper.selectAll();
+        List<UmsMember> userMember=userMapper.selectAll();
         return userMember ;
     }
     /**
@@ -40,7 +39,7 @@ public class UserServiceImpl  implements UserService {
      * @return
      */
     @Override
-    public UserMember addusermember(UserMember userMember) {
+    public UmsMember addusermember(UmsMember userMember) {
         return userMapper.addusermember(userMember);
     }
     /**
@@ -58,7 +57,7 @@ public class UserServiceImpl  implements UserService {
      * @return
      */
     @Override
-    public UserMember updateusermember(UserMember userMember) {
+    public UmsMember updateusermember(UmsMember userMember) {
         return userMapper.updateusermember(userMember);
     }
 
@@ -68,7 +67,7 @@ public class UserServiceImpl  implements UserService {
      * @return
      */
     @Override
-    public UserMember findUserMemberById(int id) {
+    public UmsMember findUserMemberById(int id) {
        return userMapper.deleteUserMemberById(id);
     }
 

@@ -1,6 +1,6 @@
-package com.xl.gmall.user.service;
+package com.xl.gmall.service;
 
-import com.xl.gmall.user.bean.UmsMemberReceiveAddress;
+import com.xl.gmall.bean.UmsMemberReceiveAddress;
 
 import java.util.List;
 
@@ -14,9 +14,9 @@ public interface UmsMemberReceiveAddressService {
     //查询所有
     List<UmsMemberReceiveAddress> findAllUmsMemberReceiveAddress();
     //添加
-    void insertUmsMemberReceiveAddress(UmsMemberReceiveAddress ums );
+    void insertUmsMemberReceiveAddress(UmsMemberReceiveAddress ums);
     //删除
-    void deleteUmsMemberReceiveAddress(int id);
+    UmsMemberReceiveAddress deleteById(int id);
     //修改
     void updateUmsMemberReceiveAddress(UmsMemberReceiveAddress ums);
     //id查询

@@ -1,4 +1,4 @@
-package com.xl.gmall.user.bean;
+package com.xl.gmall.bean;
 
 import javax.persistence.*;
 import java.io.Serializable;

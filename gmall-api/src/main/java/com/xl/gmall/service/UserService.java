@@ -1,7 +1,8 @@
-package com.xl.gmall.user.service;
+package com.xl.gmall.service;
 
-import com.xl.gmall.user.bean.UmsMemberReceiveAddress;
-import com.xl.gmall.user.bean.UserMember;
+import com.xl.gmall.bean.UmsMemberReceiveAddress;
+
+import com.xl.gmall.bean.UmsMember;
 
 import java.util.List;
 
@@ -13,13 +14,13 @@ import java.util.List;
  */
 public interface UserService {
     //查询所有UserMember
-    List<UserMember> findalluser();
+    List<UmsMember> findalluser();
     /**
      * 添加UserMember
      * @param userMember
      * @return
      */
-    UserMember addusermember(UserMember userMember);
+    UmsMember addusermember(UmsMember userMember);
 
     /**
      * 删除
@@ -33,14 +34,14 @@ public interface UserService {
      * @param userMember
      * @return
      */
-    UserMember updateusermember(UserMember userMember);
+    UmsMember updateusermember(UmsMember userMember);
 
     /**
      * 根据id查询
      * @param id
      * @return
      */
-    UserMember findUserMemberById(int id);
+    UmsMember findUserMemberById(int id);
     //查询UmsMemberReceiveAddress
     List<UmsMemberReceiveAddress> getReceiveAddressByMemberId(String memberId);
 }

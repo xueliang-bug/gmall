@@ -4,11 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xl.gmall.user.mapper.UserMapper">
     <!--查询-->
-  <select id="selectalluser" resultType="com.xl.gmall.user.bean.UserMember">
+  <select id="selectalluser" resultType="com.xl.gmall.bean.UmsMember">
       select t.* from ums_member t
   </select>
     <!--添加-->
-    <insert id="addusermember" parameterType="com.xl.gmall.user.bean.UserMember">
+    <insert id="addusermember" parameterType="com.xl.gmall.bean.UmsMember">
         insert into ums_member (username,password,nickname,phone,status,create_time,icon,gender,birthday,city,job,
         personalized_signature,source_type,integration,growth,luckey_count,history_integration)values (#{username},
         #{password},#{nickname},#{phone},#{status},#{createTime},#{icon},#{gender},#{birthday},#{city},#{job},#{personalizedSignature},
@@ -20,13 +20,13 @@
         delete * from ums_member where id=#{id}
     </delete>
     <!--修改-->
-   <update id="updateusermember" parameterType="com.xl.gmall.user.bean.UserMember">
+   <update id="updateusermember" parameterType="com.xl.gmall.bean.UmsMember">
        update ums_member set username=#{username},password=#{password},nickname=#{nickname},phone=#{phone},status=#{status},create_time=#{createTime},icon=#{icon},gender=#{gender},birthday=#{birthday}
        ,city=#{city},job=#{job},personalized_signature=#{personalizedSignature},source_type=#{sourceType},integration=#{integration},growth=#{growth},luckey_count=#{luckeyCount},history_integration=#{historyIntegration}
        where id=#{id}
    </update>
     <!--根据id查询-->
-    <select id="findUserMemberById" parameterType="java.lang.Integer" resultType="com.xl.gmall.user.bean.UserMember">
+    <select id="findUserMemberById" parameterType="java.lang.Integer" resultType="com.xl.gmall.bean.UmsMember">
         select * from ums_member where id = #{id}
     </select>
 </mapper>

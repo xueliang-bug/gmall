@@ -1,19 +1,12 @@
-package com.xl.gmall.user.bean;
-
-
+package com.xl.gmall.bean;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
-
-/**
- * @Auther: Administrator
- * @Date: 2020/5/21 17:50
- * @Description: com.xl.gmall.user.bean
- * @version: 1.0
- */
 @Entity
 @Table(name="ums_member,ums_member_level")// 用来命名 当前实体类 对应的数据库 表的名字
-public class UserMember {
+public class UmsMember implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_level_id")//数据库中所对应的外键

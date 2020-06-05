@@ -33,6 +33,30 @@ public class UmsMember implements Serializable {
     @Column(name = "history_integration")
     private Integer historyIntegration;
 
+    public UmsMember() {
+    }
+
+    public UmsMember(String memberLevelId, String username, String password, String nickname, String phone, Integer status, Date createTime, String icon, Integer gender, Date birthday, String city, String job, String personalizedSignature, Integer sourceType, Integer integration, Integer growth, Integer luckeyCount, Integer historyIntegration) {
+        this.memberLevelId = memberLevelId;
+        this.username = username;
+        this.password = password;
+        this.nickname = nickname;
+        this.phone = phone;
+        this.status = status;
+        this.createTime = createTime;
+        this.icon = icon;
+        this.gender = gender;
+        this.birthday = birthday;
+        this.city = city;
+        this.job = job;
+        this.personalizedSignature = personalizedSignature;
+        this.sourceType = sourceType;
+        this.integration = integration;
+        this.growth = growth;
+        this.luckeyCount = luckeyCount;
+        this.historyIntegration = historyIntegration;
+    }
+
     public String getId() {
         return id;
     }

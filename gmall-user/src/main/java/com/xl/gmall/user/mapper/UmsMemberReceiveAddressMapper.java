@@ -1,6 +1,7 @@
 package com.xl.gmall.user.mapper;
 
 import com.xl.gmall.bean.UmsMemberReceiveAddress;
+import org.springframework.context.annotation.Primary;
 import tk.mybatis.mapper.common.Mapper;
 
 /**

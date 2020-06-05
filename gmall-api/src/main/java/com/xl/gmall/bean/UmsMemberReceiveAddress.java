@@ -24,6 +24,21 @@ public class UmsMemberReceiveAddress implements Serializable {
     @Column(name = "detail_address")
     private String detailAddress;
 
+    public UmsMemberReceiveAddress() {
+    }
+
+    public UmsMemberReceiveAddress(String memberId, String name, String phoneNumber, Integer defaultStatus, String postCode, String province, String city, String region, String detailAddress) {
+        this.memberId = memberId;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.defaultStatus = defaultStatus;
+        this.postCode = postCode;
+        this.province = province;
+        this.city = city;
+        this.region = region;
+        this.detailAddress = detailAddress;
+    }
+
     public String getId() {
         return id;
     }

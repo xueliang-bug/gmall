@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xl.gmall.user.mapper.UmsMemberReceiveAddressMapper">
+
+  <delete id="deleteById" parameterType="com.xl.gmall.bean.UmsMemberReceiveAddress">
+        delete  * from ums_member_receive_address where id=#{id}
+    </delete>
+    <!--修改-->
+    <update id="updateUmsMemberReceiveAddress" parameterType="com.xl.gmall.bean.UmsMemberReceiveAddress">
+        update ums_member_receive_address set member_id=#{memberId},name=#{name},phone_number=#{phoneNumber},default_status=#{defaultStatus},post_code=#{postCode},
+        province=#{province},city=#{city},region=#{region},detail_address=#{detailAddress} where id=#{id}
+
+    </update>
+    <!--根据id查询-->
+    <select id="findByIdUmsMemberReceiveAddress" parameterType="integer" resultType="com.xl.gmall.bean.UmsMemberReceiveAddress">
+        select * from  ums_member_receive_address where id=#{id}
+    </select>
+</mapper>

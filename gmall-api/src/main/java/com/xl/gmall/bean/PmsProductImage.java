@@ -8,7 +8,7 @@ import java.io.Serializable;
  * @param
  * @return
  */
-public class PmsProductImage implements Serializable {
+public class PmsProductImage  implements Serializable {
 
     @Column
     @Id

@@ -3,6 +3,7 @@ package com.xl.gmall.manage.controller;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.xl.gmall.bean.PmsBaseAttrInfo;
 import com.xl.gmall.bean.PmsBaseAttrValue;
+import com.xl.gmall.bean.PmsBaseSaleAttr;
 import com.xl.gmall.service.AttrService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -27,10 +28,21 @@ public class Attrcontroller {
     @RequestMapping("attrInfoList")
     @ResponseBody
     public List<PmsBaseAttrInfo> attrInfoList(String catalog3Id){
-        List<PmsBaseAttrInfo>  pmsBaseAttrInfoList=  attrService.attrInfoList(catalog3Id);
-        return pmsBaseAttrInfoList;
+        List<PmsBaseAttrInfo> pmsBaseAttrInfos = attrService.attrInfoList(catalog3Id);
+        return pmsBaseAttrInfos;
     }
 
+    /**
+     * 自连表的查询
+     * @param
+     * @return
+     */
+    @RequestMapping("baseSaleAttrList")
+    @ResponseBody
+    public List<PmsBaseSaleAttr> baseSaleAttrList(){
+        List<PmsBaseSaleAttr>  pmsBaseSaleAttrList=  attrService.baseSaleAttrList();
+        return pmsBaseSaleAttrList;
+    }
     /**
      * 添加商品属性值
      * @param pmsBaseAttrInfo

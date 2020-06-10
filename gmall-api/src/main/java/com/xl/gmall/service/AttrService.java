@@ -2,6 +2,7 @@ package com.xl.gmall.service;
 
 import com.xl.gmall.bean.PmsBaseAttrInfo;
 import com.xl.gmall.bean.PmsBaseAttrValue;
+import com.xl.gmall.bean.PmsBaseSaleAttr;
 
 import java.util.List;
 
@@ -18,4 +19,7 @@ public interface AttrService {
     String saveAttrInfo(PmsBaseAttrInfo pmsBaseAttrInfo);
 
     List<PmsBaseAttrValue> getAttrValueList(String attrId);
+
+    //自连表的查询
+    List<PmsBaseSaleAttr> baseSaleAttrList();
 }

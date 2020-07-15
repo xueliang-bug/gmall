@@ -112,5 +112,27 @@ public class SpuServiceImpl  implements PmsProductService {
         return productImagess;
     }
 
+    /**
+     * spu查询列表属性
+     * @param productId
+     * @return
+     */
+    @Override
+    public List<PmsProductSaleAttr> spuSaleAttrListCheckBySku(String productId,String skuId) {
+       /* PmsProductSaleAttr pmsProductSaleAttr = new PmsProductSaleAttr();
+        pmsProductSaleAttr.setProductId(productId);
+        List<PmsProductSaleAttr>  productSaleAttrs = pmsProductSaleAttrMapper.select(pmsProductSaleAttr);
+        for (PmsProductSaleAttr productSaleAttr : productSaleAttrs) {
+            String saleAttrId = productSaleAttr.getSaleAttrId();
+            PmsProductSaleAttrValue pmsProductSaleAttrValue = new PmsProductSaleAttrValue();
+            pmsProductSaleAttrValue.setSaleAttrId(saleAttrId);
+            pmsProductSaleAttrValue.setProductId(productId);
+            List<PmsProductSaleAttrValue> select = pmsProductSaleAttrValueMapper.select(pmsProductSaleAttrValue);
+            productSaleAttr.setSpuSaleAttrValueList(select);
+        }*/
+        List<PmsProductSaleAttr>  productSaleAttrs = pmsProductSaleAttrMapper.selectSpuSaleAttrListCheckBySku(productId,skuId);
+        return productSaleAttrs;
+    }
+
 
 }

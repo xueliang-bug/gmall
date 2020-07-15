@@ -21,4 +21,6 @@ public interface PmsProductService {
     List<PmsProductSaleAttr> spuSaleAttrList(String spuId);
     //销售属性照片
     List<PmsProductImage> spuImageList(String spuId);
+     //查询列表属性
+    List<PmsProductSaleAttr> spuSaleAttrListCheckBySku(String productId,String skuId);
 }

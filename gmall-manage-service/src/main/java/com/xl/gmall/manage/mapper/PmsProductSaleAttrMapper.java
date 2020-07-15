@@ -1,7 +1,10 @@
 package com.xl.gmall.manage.mapper;
 
 import com.xl.gmall.bean.PmsProductSaleAttr;
+import org.apache.ibatis.annotations.Param;
 import tk.mybatis.mapper.common.Mapper;
+
+import java.util.List;
 
 /**
  * @Auther: Administrator
@@ -10,4 +13,6 @@ import tk.mybatis.mapper.common.Mapper;
  * @version: 1.0
  */
 public interface PmsProductSaleAttrMapper extends Mapper<PmsProductSaleAttr> {
+    //自定义属性列表查询的sql
+    List<PmsProductSaleAttr> selectSpuSaleAttrListCheckBySku(@Param("productId") String productId,@Param("skuId") String skuId);
 }
